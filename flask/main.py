@@ -76,11 +76,11 @@ def form_demo():
     name = request.form['username']
     pw = request.form['password']
     print(name,pw)
-    if pw != "12345":
-      error = "BAD PASSWORD"
+    if name != "golden doodle":
+      error = "not a good name"
       name=""
     else: 
-      error = ""
+      error = "Thats a good name"
       
     return render_template("form_demo.html",error=error, name=name)
 
